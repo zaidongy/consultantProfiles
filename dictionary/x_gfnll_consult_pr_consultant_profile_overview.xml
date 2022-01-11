@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Consultant Profile Overview" max_length="40" name="x_gfnll_consult_pr_consultant_profile_overview" type="collection">
+    <element label="Consultant Profile Overview" max_length="40" name="x_gfnll_consult_pr_consultant_profile_overview" sizeclass="4" type="collection">
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element attributes="encode_utf8=false" label="Consultant Profile" max_length="32" name="consultant_profile" reference="x_gfnll_consult_pr_consultant_profile" type="reference"/>
         <element default="100" label="Order" max_length="40" name="order" type="integer"/>

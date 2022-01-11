@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget">
+    <m2m_sp_ng_pro_sp_widget action="DELETE">
+        <sp_angular_provider display_value="gfProfileSection">60d2df79db9050501b96d2984b9619fd</sp_angular_provider>
+        <sp_widget display_value="Copy of GF Consultant Profile">2c35ec2adbd8905076108d3748961922</sp_widget>
+        <sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-23 14:32:38</sys_created_on>
+        <sys_id>f035ec2adbd8905076108d3748961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>gfProfileSection.Copy of GF Consultant Profile</sys_name>
+        <sys_package display_value="Consultant Profiles" source="x_gfnll_consult_pr">a47a29dcdb54181076108d3748961927</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</sys_scope>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_f035ec2adbd8905076108d3748961925</sys_update_name>
+        <sys_updated_by>Lauren.Toomey</sys_updated_by>
+        <sys_updated_on>2020-04-23 14:32:38</sys_updated_on>
+    </m2m_sp_ng_pro_sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</application>
+        <file_path/>
+        <instance_id>f2387a13db078744bdabf0e5bf96193a</instance_id>
+        <instance_name>glidefastdev</instance_name>
+        <name>m2m_sp_ng_pro_sp_widget_f035ec2adbd8905076108d3748961925</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget"><m2m_sp_ng_pro_sp_widget action="INSERT_OR_UPDATE"><sp_angular_provider display_value="gfProfileSection">60d2df79db9050501b96d2984b9619fd</sp_angular_provider><sp_widget display_value="Copy of GF Consultant Profile">2c35ec2adbd8905076108d3748961922</sp_widget><sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name><sys_created_by>Lauren.Toomey</sys_created_by><sys_created_on>2020-04-23 14:32:38</sys_created_on><sys_id>f035ec2adbd8905076108d3748961925</sys_id><sys_mod_count>0</sys_mod_count><sys_name>gfProfileSection.Copy of GF Consultant Profile</sys_name><sys_package display_value="Consultant Profiles" source="x_gfnll_consult_pr">a47a29dcdb54181076108d3748961927</sys_package><sys_policy/><sys_scope display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</sys_scope><sys_update_name>m2m_sp_ng_pro_sp_widget_f035ec2adbd8905076108d3748961925</sys_update_name><sys_updated_by>Lauren.Toomey</sys_updated_by><sys_updated_on>2020-04-23 14:32:38</sys_updated_on></m2m_sp_ng_pro_sp_widget></record_update>]]></payload>
+        <payload_hash>-146216764</payload_hash>
+        <record_name>gfProfileSection.Copy of GF Consultant Profile</record_name>
+        <reverted_from/>
+        <source>a07a29dcdb54181076108d3748961929</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-23 14:32:38</sys_created_on>
+        <sys_id>3835686adbd8905076108d3748961942</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171a77470640000001</sys_recorded_at>
+        <sys_updated_by>Lauren.Toomey</sys_updated_by>
+        <sys_updated_on>2020-04-23 14:32:38</sys_updated_on>
+        <type>Angular Providers</type>
+        <update_guid>3035686af0d890502a35c552284ea542</update_guid>
+        <update_guid_history>3035686af0d890502a35c552284ea542:-146216764</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2020-04-28 12:18:53">c27d6680db64985076108d3748961924</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-28 16:18:53</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_ng_pro_sp_widget">m2m_sp_ng_pro_sp_widget</sys_db_object>
+        <sys_id>6f7b41793ec348e9ad8d1c4cd748bc69</sys_id>
+        <sys_metadata>f035ec2adbd8905076108d3748961925</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>gfProfileSection.Copy of GF Consultant Profile</sys_name>
+        <sys_package display_value="Consultant Profiles" source="x_gfnll_consult_pr">a47a29dcdb54181076108d3748961927</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</sys_scope>
+        <sys_scope_delete display_value="">0df46b0e667a490bb7c47fa1d50e8681</sys_scope_delete>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_f035ec2adbd8905076108d3748961925</sys_update_name>
+        <sys_update_version display_value="m2m_sp_ng_pro_sp_widget_f035ec2adbd8905076108d3748961925">3835686adbd8905076108d3748961942</sys_update_version>
+        <sys_updated_by>Lauren.Toomey</sys_updated_by>
+        <sys_updated_on>2020-04-28 16:18:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

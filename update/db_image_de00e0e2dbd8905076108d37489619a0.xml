@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>6e806c62dbd8905076108d374896193e</image>
+        <name>gray-pointer.svg</name>
+        <size_bytes>598</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-23 14:10:17</sys_created_on>
+        <sys_id>de00e0e2dbd8905076108d37489619a0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>gray-pointer.svg</sys_name>
+        <sys_package display_value="Consultant Profiles" source="x_gfnll_consult_pr">a47a29dcdb54181076108d3748961927</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</sys_scope>
+        <sys_update_name>db_image_de00e0e2dbd8905076108d37489619a0</sys_update_name>
+        <sys_updated_by>Lauren.Toomey</sys_updated_by>
+        <sys_updated_on>2020-04-23 14:12:17</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>22a211f6550715fc1e13b63090ad195320e2743b83be1fac2ff3c791cfa63db5</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>598</size_bytes>
+        <size_compressed>400</size_compressed>
+        <state>available</state>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-23 14:12:16</sys_created_on>
+        <sys_id>6e806c62dbd8905076108d374896193e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2020-04-23 14:12:17</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>de00e0e2dbd8905076108d37489619a0</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="6e806c62dbd8905076108d374896193e">6e806c62dbd8905076108d374896193e</sys_attachment>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-23 14:12:16</sys_created_on>
+        <sys_id>ae806c62dbd8905076108d374896193e</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>bVFda9swFP0rmsberC/LdmwnTqFJVwpbV1i6sb0ZW421KpKRVTv797sOzWigCCTO0Tn36h6tro4Hg0blB+1shQXlGCnbuFbbfYUfd59JjtEQatvWxllVYevw1Xr1Yftts/v1cIOGcY8eHq+/3G0QJoz9lBvGtrst+v7jFgkqGLu5xwh3IfQlY9M00UlS5/fs1td9p5uBgZDNQjAxKCYEbUOL16u58KTb0MGjOP+EUaf0vgtnNGo1XbtjhTniSMoC5YnEb+cQGMFkdqjeaR5zzudmr5LyaLR9fk8oiqJgp9uTtBz6uoEMeq8G5Ud19gPQTxf+E0Mbd2Bzen8NmJ60McS/GFWqUVnXtsvG6P6SGYJ3z4pAQ/XHaVt692L/swcdlDcajjJeQkJ9HTrUVvgrj7iJ4xR2HkmaJEYISXkuI5kXlMvMkLdElkrQxTRfCLjIClosMrAS+Po4idIF4NyQdDYkETljTguRnTqQRZ7+vpiq/JjzeS0xW6/mXNf/AH5utEhWAgAA</data>
+        <length>520</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="6e806c62dbd8905076108d374896193e">6e806c62dbd8905076108d374896193e</sys_attachment>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-23 14:12:16</sys_created_on>
+        <sys_id>22806c62dbd8905076108d374896193f</sys_id>
+    </sys_attachment_doc>
+</record_update>

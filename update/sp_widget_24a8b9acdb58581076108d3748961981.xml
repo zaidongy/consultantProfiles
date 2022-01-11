@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&amp;display=swap');
+
+.template-container {
+border: 16px solid #8ED6F2; 
+background-color: white;
+text-align: center;
+}
+
+.name {
+color: #335B74;
+text-align: left;
+font-family: 'Oswald', sans-serif;
+font-weight: 700;
+text-transform: uppercase;
+font-size: 3em;
+padding-bottom: 0.5em;
+}
+
+.personal-info {
+text-align: left;
+font-size: 1.1em;
+}
+
+.position {
+font-weight: 700;
+}
+
+.secondary-header {
+color: white; 
+background-color: #32ADE4;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+text-transform: uppercase;
+font-size: 1.2em;
+padding-top: 5px;
+padding-bottom: 5px;
+text-align: left;
+padding-left: 8px;
+}
+
+.template-interior {
+width: 80%;
+display: inline-block;
+margin-bottom: 15px;
+}
+
+.secondary-info {
+text-align: left;
+padding-top: 1em;
+padding-bottom: 1em;
+}
+
+.summary {
+padding-left: 2em;
+}
+
+.personal {
+padding: 0px;
+margin: 0px;
+}
+.personal.email {
+padding-bottom: 1em;
+}
+.row.personal-row {
+  padding-bottom: 2em;
+  padding-top: 3em;
+}
+.image-holder {
+  text-align: left;
+}
+.pointer {
+width: 50px;
+height: 90px;
+position: absolute;
+margin-left: -53px;
+}
+.col-md-7.name-column {
+  padding-left: 2em;
+}
+
+.logo {
+width: 150px;
+height: 138px;
+}
+
+/* Mobile Formatting */
+@media screen and (max-width: 750px) {
+  
+  .name {
+font-size: 1.4em;
+  }
+
+  .personal-info {
+font-size: 0.7em;
+  }
+
+  .pointer {
+width: 20px;
+height: 40px;
+margin-left: -13px;
+  }
+
+  .logo {
+width: 50px;
+height: 45px;
+margin-top: 20px;
+  }
+
+  .col-md-7.name-column {
+padding-left: 6px;
+padding-top: 6px;
+  }
+
+  .template-interior {
+width: 90%;
+  }
+
+  .secondary-header {
+font-size: 1em;
+padding-top: 2px;
+padding-bottom: 2px;
+  }
+
+  .row.personal-row {
+padding-top: 1em;
+padding-bottom: 1em;
+  }
+
+  ul {
+padding-left: 20px;
+  }
+
+  .summary {
+padding-left: 1em;
+  }
+}
+
+/*Tablet Formatting*/
+
+@media screen and (min-width:751px) and (max-width: 950px) {
+  
+  .pointer {
+margin-left: -35px;
+  }
+  .logo {
+width: 100px; 
+height: 90px;
+margin-top: 30px;
+  }
+  .name {
+font-size: 2.5em;
+padding-top: 16px;
+}
+ .row.personal-row {
+    padding-bottom: 0px;
+}
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>gf-consultant-profile</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+        <name>GF Consultant Profile</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	
+		data.items = [];
+		data.sections = [];
+		data.consultant = $sp.getParameter("sys_id");
+	
+	/*This section gets the user from the sys id of the chosen consultant profile to utilize and populate the rest of the info */
+	
+	var chosenConsultant = '';
+	
+	var desiredConsultGr = new GlideRecord ('x_gfnll_consult_pr_consultant_profile');
+	desiredConsultGr.addQuery('sys_id', data.consultant);
+	desiredConsultGr.query();
+	
+	if(desiredConsultGr.next()) {
+		
+	chosenConsultant = desiredConsultGr.getValue('user');
+	
+		}
+	
+/*Now we start getting info*/
+
+	/*Certs section*/
+	var certs = {
+		name: gs.getMessage('Certifications'),
+		summary: '',
+		items: [] 
+	};
+
+	var certsGr = new GlideRecord('u_certifications_accreditations');
+	certsGr.addQuery('u_user', chosenConsultant);
+	certsGr.query();
+	while(certsGr.next()) {
+		certs.items.push(
+			{
+				label: certsGr.u_name.getLabel(),
+				displayValue: certsGr.u_name.getDisplayValue()
+			}
+		);
+	}
+
+	data.sections.push(certs);
+
+
+	/*Overview Section*/
+	var overview = {
+		name: gs.getMessage('Overview'),
+		summary: '',
+		items: [] 
+	};
+	
+	var over = new GlideRecord('x_gfnll_consult_pr_consultant_profile_overview');
+	over.addQuery('consultant_profile.user', chosenConsultant);
+	over.orderBy('order');
+	over.addActiveQuery();
+	over.query();
+	while(over.next()) {
+		overview.items.push(
+			{
+				label: over.short_description.getLabel(),
+				displayValue: over.short_description.getDisplayValue()
+			}
+		);
+	}
+
+	data.sections.push(overview);
+
+	/*Experience Section */
+		var experience = {
+		name: gs.getMessage('Experience'),
+		summary: '',
+		items: [] 
+	};
+	
+	var experGr = new GlideRecord('x_gfnll_consult_pr_consultant_profile_experience');
+	experGr.addQuery('consultant_profile.user', chosenConsultant);
+	experGr.orderBy('order');
+	experGr.addActiveQuery();
+	experGr.query();
+	while(experGr.next()) {
+		experience.items.push(
+			{
+				label: experGr.short_description.getLabel(),
+				displayValue: experGr.short_description.getDisplayValue()
+			}
+		);
+	}
+
+	data.sections.push(experience);
+
+	
+	/*User Info */
+
+	var userInfo = new GlideRecord("sys_user");
+	userInfo.addQuery('sys_id', chosenConsultant);
+	userInfo.query();
+
+	while (userInfo.next()) {
+		var user = {}
+
+		user.user_name = userInfo.user_name.getDisplayValue();
+		user.first_name = userInfo.first_name.getDisplayValue();
+		user.last_name = userInfo.last_name.getDisplayValue();
+		user.title = userInfo.title.getDisplayValue();
+		user.phone = userInfo.phone.getDisplayValue();
+	//	user.email = userInfo.email.getDisplayValue();
+		
+
+		data.items.push(user);
+	}
+
+
+	/*	Consultant Profile Summary*/
+
+	var consultant = new GlideRecord("x_gfnll_consult_pr_consultant_profile");
+	consultant.addQuery('user',chosenConsultant);
+	consultant.query();
+
+	while (consultant.next()) {
+		var consult = {};
+
+		consult.summary = consultant.summary.getDisplayValue();
+
+		data.items.push(consult);
+	}
+
+
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-17 15:29:37</sys_created_on>
+        <sys_id>24a8b9acdb58581076108d3748961981</sys_id>
+        <sys_mod_count>201</sys_mod_count>
+        <sys_name>GF Consultant Profile</sys_name>
+        <sys_package display_value="Consultant Profiles" source="x_gfnll_consult_pr">a47a29dcdb54181076108d3748961927</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</sys_scope>
+        <sys_update_name>sp_widget_24a8b9acdb58581076108d3748961981</sys_update_name>
+        <sys_updated_by>Lauren.Toomey</sys_updated_by>
+        <sys_updated_on>2020-04-30 15:21:22</sys_updated_on>
+        <template><![CDATA[<div class="template-container">
+  <div class="row personal-row">
+    <div class="col-md-1 col-xs-1">
+      <img class="pointer" src="gray-pointer.svg"/>
+    </div>
+    <div class="col-md-7 col-xs-7 name-column" ng-repeat="user in data.items | limitTo: 1">
+      <!--User Info-->
+      <div class="name">{{::user.first_name}} {{::user.last_name}}</div> 
+      <div class="personal-info">
+        <p class="position personal">{{::user.title}}</p>
+        <p class="personal">{{::user.phone}}</p>
+        <p class="personal email">{{::user.user_name}}@GlideFast.com</p>
+      </div>
+    </div>
+    <div class="col-md-2 col-xs-2">
+      <img class="logo" src="gf-logo.svg"/>
+    </div>
+    <div class="col-md-2 col-xs-1">
+    </div>
+  </div> 
+  <div class="template-interior">
+    
+    <!-- Profile Sections-->
+
+    <gf-profile-section sn-data="::section" ng-repeat="section in data.sections"></gf-profile-section>
+
+    <!--Summary-->
+<div class="secondary-header">Summary</div>
+<div class="secondary-info">
+<p class="summary" ng-repeat="consult in data.items">
+{{::consult.summary}}
+</p>
+</div>
+  </div> 
+</div>]]></template>
+    </sp_widget>
+</record_update>

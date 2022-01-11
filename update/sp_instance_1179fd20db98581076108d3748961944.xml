@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">5479fdecdb58581076108d37489619e3</sp_column>
+        <sp_widget display_value="GF Consultant Profile">24a8b9acdb58581076108d3748961981</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>Lauren.Toomey</sys_created_by>
+        <sys_created_on>2020-04-17 15:32:55</sys_created_on>
+        <sys_id>1179fd20db98581076108d3748961944</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Consultant Profiles" source="x_gfnll_consult_pr">a47a29dcdb54181076108d3748961927</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Consultant Profiles">a47a29dcdb54181076108d3748961927</sys_scope>
+        <sys_update_name>sp_instance_1179fd20db98581076108d3748961944</sys_update_name>
+        <sys_updated_by>Lauren.Toomey</sys_updated_by>
+        <sys_updated_on>2020-04-17 15:32:55</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=1179fd20db98581076108d3748961944"/>
+</record_update>
